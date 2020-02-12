@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body{
+          background-image:url("background.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-attachment: fixed;
+  background-size: 100%;
+        }
+
+    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="animate.css">
+
+    <script src="sweetaler.all.min.js"></script>
+    <script language=javascript type="text/javascript"></script>
+
+</head>
+<body>
+  
+
+
+    
+
+
+    <script>
+
+function clickme(){
+const swalWithBootstrapButtons = Swal.mixin({
+    showClass: {
+    popup: 'animated fadeInDown faster'
+  },
+  hideClass: {
+    popup: 'animated fadeOutUp faster'
+  },
+  customClass: {
+    confirmButton: 'btn btn-success',
+    cancelButton: 'btn btn-danger'
+  },
+  buttonsStyling: false
+  
+})
+
+swalWithBootstrapButtons.fire({
+  title: '測驗你多肥宅',
+  text: "肥宅乃世上最高層次之生物，你究竟修行到哪了呢!",
+  imageUrl:"fat.jpg",
+  showCancelButton: true,
+  confirmButtonText: '進行測驗!',
+  cancelButtonText: '我不要玩!',
+  reverseButtons: true
+}).then((result) => {
+  if (result.value) {
+    swalWithBootstrapButtons.fire({
+  title: "安安你好嗎？今早要不要來約？",
+  text: '一大早美女打電話過來',
+  imageUrl:"beauty.jpg",
+  showCancelButton: true,
+  confirmButtonText: '把電話按掉繼續睡',
+  cancelButtonText: '當然是約一波啦',
+  reverseButtons: true
+}).then((result) => {
+  if (result.value) {
+    swalWithBootstrapButtons.fire({
+  title: "鬧鐘還沒響",
+  text: '美女把我吵醒了，要先起床嗎',
+  imageUrl:"clock.jpeg",
+  showCancelButton: true,
+  confirmButtonText: '管他的，我要繼續睡',
+  cancelButtonText: '好吧，早起自己做早餐',
+  reverseButtons: true
+}).then((result) => {
+  if (result.value) {
+    swalWithBootstrapButtons.fire({
+  title: "阿肥啊！幫你煮了一百顆湯圓",
+  text: '媽媽幫我煮了早餐！該如何回應？',
+  imageUrl:"food.jpeg",
+  showCancelButton: true,
+  confirmButtonText: '吃早餐的時間也到了，把媽媽的愛全都吃掉吧',
+  cancelButtonText: '等等跟朋友出去吃好了',
+  reverseButtons: true
+}).then((result) => {
+  if (result.value) {
+    swalWithBootstrapButtons.fire({
+  title: "誒我有coding問題",
+  text: '朋友打電話過來要我相助，是否幫忙',
+  imageUrl:"friend.jpeg",
+  showCancelButton: true,
+  confirmButtonText: '有點麻煩，直接回絕好了',
+  cancelButtonText: '幫忙一下好了',
+  reverseButtons: true
+}).then((result) => {
+  if (result.value) {
+    swalWithBootstrapButtons.fire(
+      '恭喜你！獲得邊緣人肥宅認證',
+      '邊緣人肥宅雖然高等，但只有一人是無法做大事的',
+      'error'
+    ).then(result => {
+    clickme();
+    });
+  } else if (
+    /* Read more about handling dismissals below */
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+    swalWithBootstrapButtons.fire(
+      '肥宅coding技能增加',
+      '雖然大家都說我們是肥宅！但肥宅的羈絆會成為力量的！',
+      'success'
+    ).then(result => {
+      Swal.fire({
+  title: '恭喜！你完成了終極肥宅之考驗',
+  width: 600,
+  padding: '3em',
+  background: '#fff url(/images/trees.png)',
+  backdrop: `
+    rgba(0,0,123,0.4)
+    url("/images/nyan-cat.gif")
+    left top
+    no-repeat
+  `
+})
+    });
+  }
+})
+  } else if (
+    /* Read more about handling dismissals below */
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+    swalWithBootstrapButtons.fire(
+      '只獲得基本肥宅認證',
+      '肥宅才懶得出門覓食！',
+      'error'
+    ).then(result => {
+    clickme();
+    });
+  }
+})
+  } else if (
+    /* Read more about handling dismissals below */
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+    swalWithBootstrapButtons.fire(
+      '你這個假肥宅',
+      '肥宅會睡到自然醒！',
+      'error'
+    ).then(result => {
+    clickme();
+    });
+  }
+})
+  } else if (
+    /* Read more about handling dismissals below */
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+    swalWithBootstrapButtons.fire(
+      '你是個假肥宅',
+      '肥宅才沒有女性朋友呢',
+      'error'
+    ).then(result => {
+    clickme();
+    });
+  }
+})
+  } else if (
+    /* Read more about handling dismissals below */
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+    swalWithBootstrapButtons.fire(
+      '看更多',
+      '走啦去看看',
+      'error'
+      
+    )
+    
+    
+    .then(result => {
+    clickme();
+    });
+  }
+})
+
+
+}
+            
+        
+        window.onload = clickme();
+
+        
+</script>
+
+        
+        <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+        
+
+</body>
+
+</html>
